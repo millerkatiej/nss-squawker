@@ -4,6 +4,9 @@ ActiveAdmin.register User do
     def permitted_params
       params.permit!
     end
+    def resource
+      User.where(username: params[:id]).first!
+    end
   end
   
   # See permitted parameters documentation:

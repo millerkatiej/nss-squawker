@@ -7,4 +7,5 @@ Feature: Permalink
 Scenario: User "millerkatiej" visits their profile page
 	Given a user named "millerkatiej" signs up
 	When I click "My Profile"
-	Then the URL will display as "/users/1-millerkatiej" 
+  And I am redirected to my profile page at "/users/millerkatiej"
+  Then the URL will display as "/users/millerkatiej"
